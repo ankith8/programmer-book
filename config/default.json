@@ -1,0 +1,7 @@
+{
+    "mongoURI":"mongodb+srv://ankith:ankith@devconnector.jfo4n.mongodb.net/<dbname>?retryWrites=true&w=majority",
+    "jwtSecret":"My_Super_Secret_Key",
+    "githubClientId":"b926645d7a8e7149e2e6",
+    "githubSecret":"6303c41cc1c1d31b5ac36209e8a8068b88eca164",
+    "githubToken":""
+}
