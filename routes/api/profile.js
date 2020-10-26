@@ -10,7 +10,7 @@ const { json } = require("express");
 
 const Profile = require("../../models/Profile");
 const User = require("../../models/User");
-// const Post = require("../../models/Post");
+const Post = require("../../models/Post");
 
 // @route GET api/profile/me
 // @desc Get current user's profile route
@@ -144,6 +144,9 @@ router.get(
 // @access   Private
 router.delete("/", auth, async (req, res) => {
   try {
+
+    await Post.deleteMany({user:req.user.id});
+
     await Profile.findOneAndRemove({
       user: req.user.id,
     });
